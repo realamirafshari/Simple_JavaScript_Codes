@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+}
+body {
+  background-color: #effbf9;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  background-color: #3fe0d3;
+  width: 18rem;
+  height: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.307);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.button.active {
+  background-color: #623a7f;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  gap: 5px;
+  img {
+    width: 3.5rem;
+  }
+}
+.button-text {
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.button-text.active {
+  transform: translateX(180px);
+  opacity: 0;
+}
+.airplane {
+  transition: all 0.3s ease-in-out;
+}
+.airplane.active {
+  transform: translateX(230px);
+}
+
+.take-off {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50;
+  left: -210px;
+  transition: all 0.3s ease-in-out;
+}
+
+.airplane-takeoff {
+  width: 2.5rem;
+}
+.take-off.active {
+  transform: translateX(180px);
+  opacity: 1;
+}
+.line {
+  width: 150px;
+}
+
+.take-off.forward {
+  transform: translateX(400px);
+  opacity: 0;
+}
+
+.finish {
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+  color: white;
+  i{
+    margin-right: 10px;
+  }
+}
+
+.finish.active {
+  opacity: 1;
+  top: 22px;
+
+}
